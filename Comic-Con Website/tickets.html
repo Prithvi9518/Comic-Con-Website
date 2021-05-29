@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Get Tickets Here</title>
+        <link rel="stylesheet" href="css/comicstyles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    </head>
+    <body class="tickback">
+
+         <!-- Navbar -->
+         <nav>
+            <div class="navimg"></div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="tickets.html">Get Tickets</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="timetable.html">Timetables</a></li>
+                <li><a href="sponsors.html">Industry & Sponsors</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <section class="ticketcontent">
+            <p><b>Location: Dublin Convention Center, Dublin.</b></p>
+            <p><b>Dates: Jul 12, 2021 - Jul 13, 2021</b></p>
+            <p><b>For all ages.</b></p>
+        </section>
+
+         <!-- Form -->
+         <div class="ticketform">
+            <form id="ticket" name="ticket">
+                <header>Ticket Booking</header>
+
+                <div id="error"></div>
+
+                <label for="name">Please enter your name:</label><br>
+                <input type="text" name="name" id="name" placeholder="John Doe" onblur="nameValid()"><br>
+
+                <label for="type">Select the type of ticket you want:</label><br>
+                 <select name="type" id="type" onblur="typeValid()">
+                     <option value="None" selected>None</option>
+                     <option value="general">General Admission Ticket(€12.46)</option>
+                     <option value="vip">VIP Ticket(€48.34)</option>
+                 </select><br>
+     
+                 <label for="date">Choose Date:</label><br>
+                 <select name="date" id="date">
+                     <option value="12">12th July, 2021</option>
+                     <option value="13">13th July, 2021</option>
+                 </select><br>
+     
+                 <label for="number">Number of Tickets:</label><br>
+                 <input type="number" name="number" id="number" onblur="ticketValid()"><br>
+     
+                 <label for="email">Please enter your email address:</label><br>
+                 <input type="email" name="email" id="email" placeholder="example123@xyz.com" onblur="emailValid()"><br>
+     
+                 <label for="password">Email password:</label><br>
+                 <input type="password" name="password" id="password" placeholder="**********" onblur="passwordValid()"><br>
+
+                 <label for="confirm">Confirm password:</label><br>
+                 <input type="password" name="confirm" id="confirm" placeholder="**********" onblur="confirmPass()"><br>
+     
+                 <input type="submit" name="submit" id="submit" onclick="alert('Form submitted successfully!')">
+              </form>
+         </div>
+         
+         
+
+    <script src="js/tickets.js"></script>
+    </body>
+    </html>
